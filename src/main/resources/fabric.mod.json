@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "meteorbot",
   "version": "${version}",
-  "name": "Addon Template",
+  "name": "Meteor-Bot",
   "description": "An addon template for the Meteor addons.",
   "authors": [
     "seasnail"
@@ -14,11 +14,11 @@
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "com.astatin3.meteorbot.Addon"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "meteorbot.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,25,25"

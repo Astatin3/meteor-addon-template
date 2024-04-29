@@ -1,8 +1,8 @@
-package com.example.addon;
+package com.astatin3.meteorbot;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import com.astatin3.meteorbot.commands.CommandExample;
+import com.astatin3.meteorbot.hud.HudExample;
+import com.astatin3.meteorbot.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.commands.Commands;
@@ -14,12 +14,12 @@ import org.slf4j.Logger;
 
 public class Addon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
-    public static final Category CATEGORY = new Category("Example");
-    public static final HudGroup HUD_GROUP = new HudGroup("Example");
+    public static final Category CATEGORY = new Category("MeteorBot");
+    public static final HudGroup HUD_GROUP = new HudGroup("MeteorBot");
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing Meteor Addon Template");
+//        LOG.info("Initializing Meteor Addon Template");
 
         // Modules
         Modules.get().add(new ModuleExample());
@@ -38,6 +38,6 @@ public class Addon extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "com.astatin3.meteorbot";
     }
 }

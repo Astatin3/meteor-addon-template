@@ -1,5 +1,6 @@
 plugins {
     id "fabric-loom" version "1.6-SNAPSHOT"
+    id "java"
 }
 
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
@@ -17,6 +18,16 @@ repositories {
         name = "Meteor Dev Snapshots"
         url = "https://maven.meteordev.org/snapshots"
     }
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+    maven {
+        url "https://alwyn974.github.io/maven"
+    }
+    maven {
+        url "https://repo.opencollab.dev/maven-releases/"
+    }
 }
 
 dependencies {
@@ -27,6 +38,9 @@ dependencies {
 
     // Meteor
     modImplementation "meteordevelopment:meteor-client:${project.meteor_version}"
+
+    // MeteorBot
+    implementation "net.tridentsdk:tridentsdk-client:0.6.0"
 }
 
 processResources {
